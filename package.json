@@ -1,3 +1,10 @@
 {
-    
+  "name": "whomstIsOn",
+  "version": "0.0.1",
+  "licesnse": "MIT",
+  "dependencies": {
+    "@types/node": "^11.13.6",
+    "node": "^11.14.0",
+    "telebot": "^1.2.6"
+  }
 }
