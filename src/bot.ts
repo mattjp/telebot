@@ -9,7 +9,8 @@ bot.on("/start", msg => {
 });
 
 bot.on("photo", msg => {
-  msg.reply.text("That was a photo.")
+  msg.reply.text("That was a photo.");
+  msg.reply.photo(msg.photo[0].file_id);
 });
 
 bot.start();
