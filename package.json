@@ -1,11 +1,16 @@
 {
   "name": "whomst_is_on",
   "version": "0.0.1",
-  "licesnse": "MIT",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattjp/whomstison.git"
+  },
   "dependencies": {
     "@types/node": "^11.13.6",
     "node": "^11.14.0",
     "telebot": "^1.2.6",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
   }
 }

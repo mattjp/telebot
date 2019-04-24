@@ -8,4 +8,8 @@ bot.on("/start", msg => {
   msg.reply.text("I am officially on!");
 });
 
+bot.on("photo", msg => {
+  msg.reply.text("That was a photo.")
+});
+
 bot.start();
