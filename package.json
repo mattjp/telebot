@@ -1,7 +1,13 @@
 {
   "name": "whomst_is_on",
   "version": "0.0.1",
+  "description": "Find out who's online in Telegram",
+  "author": "Matt Peretick mattjp@umich.edu",
   "license": "UNLICENSED",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mattjp/whomstison.git"

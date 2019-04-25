@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
-CMD ts-node src/bot.ts
+EXPOSE 8080
+
+CMD ["npm", "start"]
