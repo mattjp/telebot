@@ -1,9 +1,7 @@
 "use strict";
-
-import { TELEGRAM_BOT_TOKEN } from "../config/constants";
+import { TELEGRAM_BOT_TOKEN } from "../config/secrets";
 
 const TeleBot = require("telebot");
-
 const bot = new TeleBot(TELEGRAM_BOT_TOKEN);
 
 bot.on("/start", msg => {

@@ -1,8 +1,8 @@
 "use strict";
 exports.__esModule = true;
-var constants_1 = require("../config/constants");
+var secrets_1 = require("../config/secrets");
 var TeleBot = require("telebot");
-var bot = new TeleBot(constants_1.TELEGRAM_BOT_TOKEN);
+var bot = new TeleBot(secrets_1.TELEGRAM_BOT_TOKEN);
 bot.on("/start", function (msg) {
     msg.reply.text("I am officially on!");
 });
