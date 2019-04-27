@@ -17,6 +17,7 @@
     "@types/node": "^11.13.6",
     "node": "^11.14.0",
     "request": "^2.88.0",
+    "superagent": "^5.0.3",
     "telebot": "^1.2.6",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.4"

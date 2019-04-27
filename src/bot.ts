@@ -9,8 +9,10 @@ bot.on("/start", msg => {
   msg.reply.text("I am officially on!");
 });
 
-bot.on("/whomst", msg => {
-  getSteamPresence();
+bot.on("/whomst", async msg => {
+  const presence = await getSteamPresence();
+  console.log("PqPqPqPqPqPqPqPqPq")
+  console.log(presence);
 });
 
 bot.on("photo", msg => {
