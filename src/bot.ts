@@ -11,8 +11,16 @@ bot.on("/start", msg => {
 
 bot.on("/whomst", async msg => {
   const presence = await getSteamPresence();
-  console.log("PqPqPqPqPqPqPqPqPq")
-  console.log(presence);
+  let response = "";
+  presence.forEach(player => {
+    if (player.status) {
+      response += "✅";
+    } else {
+      response += "🔴 ";
+    }
+    response += player.id + "\n"
+  });
+  msg.reply.text(response);
 });
 
 bot.on("photo", msg => {

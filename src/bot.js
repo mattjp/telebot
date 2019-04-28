@@ -44,7 +44,7 @@ bot.on("/start", function (msg) {
     msg.reply.text("I am officially on!");
 });
 bot.on("/whomst", function (msg) { return __awaiter(_this, void 0, void 0, function () {
-    var presence;
+    var presence, response;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, steam_1.getSteamPresence()];
@@ -52,6 +52,17 @@ bot.on("/whomst", function (msg) { return __awaiter(_this, void 0, void 0, funct
                 presence = _a.sent();
                 console.log("PqPqPqPqPqPqPqPqPq");
                 console.log(presence);
+                response = "";
+                presence.forEach(function (player) {
+                    if (player.status) {
+                        response += "✅";
+                    }
+                    else {
+                        response += "🔴 ";
+                    }
+                    response += player.id + "\n";
+                });
+                msg.reply.text(response);
                 return [2 /*return*/];
         }
     });

@@ -36,12 +36,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var secrets_1 = require("../../config/secrets");
-// const https = require("https");
-// const request = require("request");
 var superagent = require("superagent");
 var baseUrl = "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/";
-// const queryUrl =
-// "?key=541F483EFF82A81E75E817C103F51852&format=json&steamids=76561197960287930";
 function getSteamPresence() {
     return __awaiter(this, void 0, void 0, function () {
         var summaries, presence;
@@ -52,13 +48,12 @@ function getSteamPresence() {
                     summaries = _a.sent();
                     presence = [];
                     summaries.response.players.forEach(function (player) {
-                        console.log("-----", player);
-                        presence.push(player.personastate);
+                        var steamid = player.steamid, personastate = player.personastate;
+                        presence.push({
+                            id: secrets_1.STEAM_IDS[steamid],
+                            status: personastate
+                        });
                     });
-                    // summaries.forEach(summary => {
-                    //   console.log("^^^^^^^^");
-                    //   console.log(summary);
-                    // });
                     return [2 /*return*/, presence];
             }
         });
@@ -67,8 +62,8 @@ function getSteamPresence() {
 exports.getSteamPresence = getSteamPresence;
 function getSteamIds() {
     var ids = "";
-    secrets_1.STEAM_IDS.forEach(function (entry) {
-        ids += entry[1] + ",";
+    Object.keys(secrets_1.STEAM_IDS).forEach(function (key) {
+        ids += key + ",";
     });
     return ids;
 }
