@@ -14,7 +14,7 @@ bot.on("/whomst", async msg => {
   let response = "";
   presence.forEach(player => {
     if (player.status) {
-      response += "✅";
+      response += "✅ ";
     } else {
       response += "🔴 ";
     }
